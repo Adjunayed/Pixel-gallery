@@ -1,0 +1,29 @@
+@Composable
+fun LoginScreen(navController: NavHostController) {
+    Scaffold(topBar = { TopAppBar(title = { Text("Login") }) }) {
+        Column {
+            OutlinedTextField(value = "", onValueChange = {}, label = { Text("Email") })
+            OutlinedTextField(value = "", onValueChange = {}, label = { Text("Password") })
+            Button(onClick = { navController.navigate("home") }) {
+                Text("Login")
+            }
+            TextButton(onClick = { navController.navigate("register") }) {
+                Text("No account? Register")
+            }
+        }
+    }
+}
+
+@Composable
+fun RegisterScreen(navController: NavHostController) {
+    Scaffold(topBar = { TopAppBar(title = { Text("Register") }) }) {
+        Column {
+            OutlinedTextField(value = "", onValueChange = {}, label = { Text("Name") })
+            OutlinedTextField(value = "", onValueChange = {}, label = { Text("Email") })
+            OutlinedTextField(value = "", onValueChange = {}, label = { Text("Password") })
+            Button(onClick = { navController.navigate("home") }) {
+                Text("Register")
+            }
+        }
+    }
+}
