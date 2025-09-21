@@ -1,0 +1,19 @@
+@Composable
+fun HomeScreen(navController: NavHostController) {
+    Scaffold(topBar = { TopAppBar(title = { Text("Products") }) }) {
+        LazyColumn {
+            items(10) { index ->
+                Card(
+                    onClick = { navController.navigate("productDetail/$index") },
+                    modifier = androidx.compose.ui.Modifier.padding(8.dp)
+                ) {
+                    Column(modifier = androidx.compose.ui.Modifier.padding(16.dp)) {
+                        Text("Product #$index", style = MaterialTheme.typography.titleMedium)
+                        Text("Description of product $index")
+                        Text("Price: $${(10..100).random()}")
+                    }
+                }
+            }
+        }
+    }
+}
