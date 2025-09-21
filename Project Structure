@@ -1,0 +1,11 @@
+├── app/
+│   ├── java/com/example/ecommerce
+│   │   ├── activities/       # Activities (Login, Product, Cart, etc.)
+│   │   ├── adapters/         # RecyclerView Adapters
+│   │   ├── models/           # Data models
+│   │   ├── network/          # API & Firebase integration
+│   │   ├── utils/            # Helpers & utilities
+│   │   └── viewmodels/       # MVVM architecture components
+│   └── res/                  # Layouts, Drawables, Values
+├── build.gradle
+└── README.md
