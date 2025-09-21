@@ -1,0 +1,13 @@
+@Composable
+fun OrdersScreen(navController: NavHostController) {
+    Scaffold(topBar = { TopAppBar(title = { Text("Orders") }) }) {
+        LazyColumn {
+            items(5) { index ->
+                ListItem(
+                    headlineContent = { Text("Order #$index") },
+                    supportingContent = { Text("Status: Delivered") }
+                )
+            }
+        }
+    }
+}
