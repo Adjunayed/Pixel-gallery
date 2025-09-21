@@ -1,0 +1,13 @@
+@Composable
+fun ProductDetailScreen(navController: NavHostController, productId: String?) {
+    Scaffold(topBar = { TopAppBar(title = { Text("Product Detail") }) }) {
+        Column(modifier = androidx.compose.ui.Modifier.padding(16.dp)) {
+            Text("Product ID: $productId", style = MaterialTheme.typography.titleLarge)
+            Text("Product description goes here...")
+            Text("Price: $50")
+            Button(onClick = { navController.navigate("cart") }) {
+                Text("Add to Cart")
+            }
+        }
+    }
+}
