@@ -1,0 +1,18 @@
+@Composable
+fun ProfileScreen(navController: NavHostController) {
+    Scaffold(topBar = { TopAppBar(title = { Text("Profile") }) }) {
+        Column(modifier = androidx.compose.ui.Modifier.padding(16.dp)) {
+            Text("User Name: John Doe")
+            Text("Email: johndoe@email.com")
+            Button(onClick = { navController.navigate("orders") }) {
+                Text("View Orders")
+            }
+            Button(onClick = { navController.navigate("wishlist") }) {
+                Text("View Wishlist")
+            }
+            Button(onClick = { navController.navigate("login") }) {
+                Text("Logout")
+            }
+        }
+    }
+}
