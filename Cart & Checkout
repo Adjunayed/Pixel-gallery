@@ -1,0 +1,12 @@
+@Composable
+fun CartScreen(navController: NavHostController) {
+    Scaffold(topBar = { TopAppBar(title = { Text("Cart") }) }) {
+        Column(modifier = androidx.compose.ui.Modifier.padding(16.dp)) {
+            Text("Your cart items...")
+            Spacer(modifier = androidx.compose.ui.Modifier.height(10.dp))
+            Button(onClick = { /* Checkout logic */ }) {
+                Text("Proceed to Checkout")
+            }
+        }
+    }
+}
